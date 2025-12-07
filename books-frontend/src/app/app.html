@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <a class="navbar-brand" routerLink="/">Böcker</a>
+  <a class="navbar-brand" routerLink="/quote">Citat</a> 
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a class="nav-link" routerLink="/login">Logga In</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a class="nav-link" routerLink="/register">Registera</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <span class="nav-link">Inloggad som {{ username }}</span>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a class="nav-link" (click)="logout()">Logga Ut</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="bg-dark text-white text-center py-2 mt-4 d-flex justify-content-between align-items-center">
+  <div>
+    &copy; 2025 – Skapad av Jingxiang Xu
+  </div>
+
+  <button class="btn btn-sm btn-light" (click)="toggleDarkMode()">
+    {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+  </button>
+</footer>

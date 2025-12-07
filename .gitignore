@@ -1,6 +1,9 @@
+bin/
+obj/
+*.user
+*.vs
+*.vscode
+appsettings.Development.json
 node_modules/
-bower_components/
-*.log
-
-build/
 dist/
+.angular/
