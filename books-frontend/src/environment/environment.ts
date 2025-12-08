@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'http://localhost:5220'
+  apiUrl: 'https://praktik-test-production.up.railway.app'
 };
