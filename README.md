@@ -1,3 +1,4 @@
+# BACKEND NOT HOSTED ANYMORE
 # Books & Quotes Management System 📚💬
 
 This project is a technical assessment developed for **RedRiver Consulting**. It is a full-stack application designed to manage a book collection and personal quotes, featuring secure authentication and a responsive design.
